@@ -1,0 +1,128 @@
+.header_native{
+  display: flex;
+    background:#F5F5F5;
+}
+.header_nav>a,.header_nav>span{
+    display:inline-block;
+}
+.header_line{
+    display:flex;
+}
+.header_logo{
+    width:130px;
+    display: block;
+    height: 36px;
+    float: left;
+    background:url("../img/header/header_new_v7.png")-33px -137px no-repeat;
+}
+.header_font{
+    color:#666;
+    font-size:10px;
+    padding-top:7px;
+}
+.header_nav>a{
+    margin-right:3px;
+}
+.header_span{
+   margin-left:540px;
+}
+.header_span>span{
+    margin-left:5px;
+}
+.header_search{
+    position:relative;
+    display:flex;
+    margin:15px auto;
+    right:30px;
+}
+.header_search_logo{
+    width:166px;
+    height:29px;
+    display:block;
+    background: url(../img/header/4.png) 0 0 no-repeat;
+}
+.header_search_station{
+    display:inline-block;
+    width:152px;
+    height:40px;
+    position:absolute;
+    right:500px;
+}  
+.curcity:hover{
+    cursor:pointer;
+}
+.curcity_img1{
+    width:16px;
+    height:20px;
+    background:url(../img/header/search3.png) no-repeat -30px -30px;
+    display: inline-block;
+}
+.curcity_font_1{
+    font: 22px/1 \5fae\8f6f\96c5\9ed1,sans-serif;
+    margin: 8px 4px 0 8px;
+    color: #009bb3;
+    max-width: 134px;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+}
+.curcity_font_2{
+    font: 12px/1 \5fae\8f6f\96c5\9ed1,sans-serif;
+    margin: 16px 0 0 0;
+    color: #333;
+}
+.curcity_img2{
+    height: 4px;
+    width: 8px;
+    display:inline-block;
+    margin: 16px 0 0 6px;
+    font: 0/1 Arial;
+    overflow: hidden;
+    background: url(../img/header/search3.png) no-repeat 0 0;
+}
+.header_search_input{
+    width:518px;
+    height:38px;
+    position:absolute;
+    right:-20px;
+    padding: 3px;
+   background: #f24a15;
+   padding:0;
+}
+.please_input{
+    display:inline-block;
+    width:326px;
+    height:32px;
+    background:#fff;
+    border:0;
+   color: #999;
+   border-bottom:1px solid #f24a15;
+   margin-left:3px;
+}
+.search{
+    display:inline-block;
+    width:86px;
+    background:#f45827;
+    margin-top:0;
+    color:white;
+    right: 58px;
+    font-size: 14px;
+    width: 76px;
+    text-align: center;
+    font-weight:bold;  
+}
+.search_self{
+    display:inline-block;
+    width:62px;
+    height:34px;
+    margin:0 0 0 38px;
+   padding-top:5px;
+    border-left: 2px solid #fff;
+    background: #ff7145;
+    text-align: center;
+    font-weight:bold;
+    color:white;
+}
+.search_self,.search:hover{
+    cursor:pointer;
+}

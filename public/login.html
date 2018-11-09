@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+   <link rel="stylesheet" href="css/login.css">
+   <link rel="stylesheet" href="css/common.css">
+   <link rel="stylesheet" href="css/register_login.css">
+</head>
+<body>
+    <!--登录页面头部-->
+    <header>
+     <ul class="register_header ">
+         <li><a href="http://127.0.0.1:3001/login.html" class="register_font1">登录</a></li>
+         <li><a href="http://127.0.0.1:3001/register.html" class="register_font1">注册 <span>|</span> </a></li>
+         <li><a href="index.html" class="register_font1">去哪儿网首页<span>|</span></a></li>
+         <li><a href="#" class="register_font1">联系客服</a></li>
+     </ul>
+ </header>
+ <!--登录页面主要内容-->
+  <section class="register_page_width" >
+     <div class="register_nav">
+         <a href="#"><img src="img/index/logo.png" alt=""/></a>
+         <span>账号登录</span>
+     </div>
+     <!--中间两大块-->
+     <div class="login_main">
+        <!--左边:图文-->
+        <div class="login_left"> 
+            <div>
+                <img src="img/login/2_phone.png" alt="">
+            </div>
+            <dl class="login_left_explain">
+                    <dt>
+                        使用去哪儿客户端<br>
+                        手机扫描安全登录
+                    </dt>
+                    <dd>
+                        1. 打开手机去哪儿客户端并登录去哪儿账号<br>
+                        2. 在去哪儿登录页点击右上角扫码安全登录<br>
+                        3. 使用去哪儿客户端左上角扫描功能完成登录<br>
+                    </dd>
+            </dl>
+            <img src="img/login/1.jpg" alt="">
+        </div>
+    
+        <!--右边:表单-->
+        <div class="login_right">
+            <div class="login_method">
+                <div >
+                    <input type="radio" id="login_normal" name="login" checked class="login_method_active">
+                    <label for="login_normal">账号登录</label> 
+                </div>
+                <div>
+                     <input type="radio" id="login_moble" name="login" class="login_method_active">
+                    <label for="login_moble">短信验证码登录</label> 
+                </div>
+            </div>
+            <div>
+                <img src="img/login/login.png" alt="" class="login_img">|
+                <input type="text" placeholder="手机号/邮箱/用户名" class="login_input" required>
+                <p id="p_uname"></p>
+            </div>
+             <div class="input_pwd">
+                <img src="img/login/pwd.png" alt="" class="login_img">|
+                <input type="password" class="login_input" placeholder="请输入密码" required>
+                <p id="p_upwd"</p>
+            </div>
+            <div class="login_input_code">
+                <input type="text" placeholder="请输入验证码" > 
+                <canvas width="96" height="30" class="canvas">您的浏览器版本太低，请升级！</canvas> 
+                <button type="button" >获取验证码</button>
+            </div>
+            <div class="login_lg">
+                <input type="checkbox" id="login_lg_auto" checked><label for="login_lg_auto">三个月内自动登录 </label> <span><a href="#" class="login_lg_a">忘记密码</a><a href="#" class="login_lg_a login_lg_a_margin">|</a> <a href="http://127.0.0.1:3001/register.html" class="login_lg_a">立即注册</a></span>
+            </div>
+            <div class="login_err">请输入注册手机或邮箱</div>
+            <div><button type="button" class="login_btn">登录</button></div>
+            <!--下面部分-->
+            <div class="login_other_method">
+                    <div class="login_other_method_other">
+                        <div class="left_line"></div>
+                        <div>第三方账号登录</div>
+                        <div class="right_line"></div>
+                    </div>
+                    <div class="other_method">
+                        <a href="#" class="login_wechat">微信</a>
+                        <a href="#" class="login_QQ">QQ</a>
+                        <a href="#" class="login_weibo">微博</a>
+                        <a href="#" class="login_baidu">百度</a>
+                    </div>
+            </div>
+        </div>
+           <!--为保障安全，请输入手机动态码-->
+            <div class=" login_right_1">
+                  <div class="login_number"><span>您目前已登录账号 </span>  <span>123</span> </div> 
+                  <p class="border_none">
+                        为保障安全，请输入手机动态码
+                  </p>
+                 <div class="login_right_num1">
+                      <div class="login_right_res">
+                        <img src="img/login/pwd.png" alt="">
+                        <input type="text" placeholder="| 请输入验证码" class="input_border_none"> 
+                         <canvas width="96" height="30" class="canvas">您的浏览器版本太低，请升级！</canvas>
+                       <button type="button" >获取验证码</button>
+                </div>
+                </div>
+                <div class="login_lg_1">
+                        <input type="checkbox" id="login_lg_auto" checked><label for="login_lg_auto">三个月内自动登录 </label> <span><a href="http://127.0.0.1:3001/register.html" class="login_lg_a">立即注册</a></span>
+             </div>
+              <div><button type="button" class="login_btn_1">确认</button></div>
+              <p><a href="#">使用其他账号登录</a> </p>
+           </div>
+    </div>
+  </section>
+  <!--登录页面尾部-->
+  <iframe src="footer.html" frameborder="0" style="height:200px;width:100%;"></iframe>
+  <script src="js/ajax.js" ></script>
+  <script src="js/login.js" ></script>
+ 
+</body>
+</html>

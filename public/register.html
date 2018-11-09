@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <link rel="stylesheet" href="css/common.css"/>
+    <link rel="stylesheet" href="css/register.css"/>
+     <link rel="stylesheet" href="css/register_login.css">
+  
+</head>
+<body>
+ <!--登录页面头部-->
+ <header>
+     <ul class="register_header ">
+         <li><a href="http://127.0.0.1:3001/login.html" class="register_font1">登录</a></li>
+         <li><a href="http://127.0.0.1:3001/register.html" class="register_font1">注册 <span>|</span> </a></li>
+         <li><a href="http://127.0.0.1:3001/index.html" class="register_font1">去哪儿网首页<span>|</span></a></li>
+         <li><a href="#" class="register_font1">联系客服</a></li>
+     </ul>
+ </header>
+ <!--登录页面主体-->
+  <section class="register_page_width">
+     <div class="register_nav">
+         <a href="#"><img src="img/index/logo.png" alt=""/></a>
+         <span>账号注册</span>
+     </div>
+      <!--登录信息-->
+      <div class="register_container">
+          <!--登录表单信息-->
+          <div class="register_container-left">
+              <div class="input_country input_position">
+                  <label class="label "> 国家/地区
+
+                  </label>
+                  <div class="input_border">
+                        <input type="textbox" value="中国 86" class="input_c">
+                        <img src="img/register/2.png" alt="">
+                  </div>
+              </div>
+              <div class="input_position">
+                  <label class="label label_phone">手机号码</label>
+                  <input type="text" placeholder="请输入手机号码" class="register_input" name="uname" />
+                  <span class="register_input_explain">可用于激活码获取、密码找回、订单查询等</span>
+              </div>
+              <div class="input_position"><label class="label label_psw">登录密码</label>
+                  <input type="password" placeholder="请输入登录密码"  class="register_input" name="upwd">
+                  <span  class="register_input_explain">密码必须为6~18位的字母或数字！</span>
+              </div>
+              <div class="input_position">
+                <label class="label label_phone">用户昵称</label>
+                <input type="text" placeholder="请输入用户昵称" class="register_input" name="user_name" />
+                <span class="register_input_explain">昵称必须为6~18位的字母或数字！</span>
+            </div>
+              <div class="input_position"><label class="label label_psw">用户性别</label>
+                <input type="radio"   name="gender" value="1"  checked> <span class="register_input_explain">男</span> 
+                <input type="radio"   name="gender" value="2" ><span class="register_input_explain">女</span> 
+            </div>
+              <div class="input_position"><label class="label label_check">验证码</label>
+                  <input type="text" placeholder="请输入验证码" class="input_check">
+                  <canvas id="input_check_code" width="96" height="30">您的浏览器版本太低，请升级！！！</canvas><a href="#" class="replace_a_pies">换一张</a>
+              </div>
+              <!-- <div class="input_position"><label class="label label_jh">激活码</label>
+                  <input type="text" placeholder="请输入激活码" class="input_check">
+                  <button type="button" class="get_code">获取激活码</button>
+              </div> -->
+              <div >
+                  <input type="checkbox" id="regiser_pro"  checked>
+                  <label for="regiser_pro" class="pro_font">我已阅读并同意遵守</label>
+                  <a href="#" class="pro_xy">&lt;&lt;去哪儿用户服务协议&gt;&gt;</a>
+              </div>
+              <div>
+                  <input type="button" value="同意协议并注册" class="angree_reg">
+                  <span class="pro_font">使用 <a href="#">邮箱注册</a></span>
+              </div>
+          </div>
+          <!--其他信息-->
+          <div class="register_container-right">
+              <div class="register_container-right-font1">注册成为“去哪儿”的用户后，您可以：</div>
+              <ul class="register_ul">
+                  <li>畅游与去哪儿合作的 <span>机票、酒店、度假</span>        机票、酒店、度假代理商网站，轻松管理订单</li>
+                  <li>查询、计划、管理您的预订信息</li>
+                  <li>享受优质超低价格<span>团购</span>服务</li>
+                  <img src="img/register/1.jpg" alt="">
+          </div>
+      </div>
+  </section>
+<!--登录页面尾部-->
+ <iframe src="footer.html" frameborder="0" style="height:200px;width:100%;"></iframe>
+ <script src="js/ajax.js"></script>
+ <script src="js/register.js"></script>
+</body>
+</html>

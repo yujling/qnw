@@ -1,0 +1,145 @@
+SET NAME UTF8;
+DROP DATABASE IF EXISTS qnw;
+CREATE DATABASE qnw CHARSET=UTF8;
+USE qnw;
+
+#�û���Ϣ��
+CREATE TABLE qnw_user(
+   uid INT  PRIMARY KEY NOT NULL AUTO_INCREMENT,
+   uname VARCHAR(32)  UNIQUE,
+   upwd  VARCHAR(32),
+   email  VARCHAR(32) NOT NULL UNIQUE,
+   avatar   VARCHAR(128),
+   user_name VARCHAR(32),
+   gender  INT
+);
+#�û�������
+CREATE TABLE qnw_order(
+    aid  INT  PRIMARY KEY NOT NULL AUTO_INCREMENT,
+    user_id INT,
+    status  INT,
+    order_time BIGINT,  
+    pay_time BIGINT,           
+    startup_time  BIGINT,     
+    arrived_time   BIGINT     
+  );
+
+#�û����������
+CREATE TABLE qnw_order_detail(
+    did INT PRIMARY KEY AUTO_INCREMENT,
+     order_id   INT,
+     titket_id    INT,
+      count       INT
+);
+ 
+#��Ʊ����
+CREATE TABLE qnw_laptop_family(
+    fid  INT  PRIMARY KEY  AUTO_INCREMENT,
+    name  VARCHAR(32)
+);
+
+#��Ʊ��
+CREATE TABLE qnw_laptop(
+    lid  INT PRIMARY KEY AUTO_INCREMENT,
+    family_lid   INT,
+    titcetid   INT,
+    price      decimal(10,2),
+    shelf_time   BIGINT,
+    remain_count   INT,
+    is_onsale    BOOLEAN
+);
+
+#��ҳ�ֲ�ͼ��
+CREATE TABLE qnw_carousel(
+  cid  INT  PRIMARY KEY AUTO_INCREMENT,
+   img   VARCHAR(128),
+   title  VARCHAR(64),
+   href   VARCHAR(128)
+);
+#详情页图片
+CREATE TABLE qnw_laptop_pic(
+    pid INT(11) PRIMARY KEY AUTO_INCREMENT,
+    laptop_id INT(11),
+    sm VARCHAR(128),
+    md VARCHAR(128),
+    lg VARCHAR(128)
+);
+#首页商品
+CREATE TABLE qnw_index_product(
+  pid INT PRIMARY KEY AUTO_INCREMENT,
+  title VARCHAR(64),
+  details VARCHAR(128),
+  pic VARCHAR(128),
+  price DECIMAL(10,2),
+  href VARCHAR(128),
+  seq_recommended TINYINT,
+  seq_new_arrival TINYINT,
+  seq_top_sale TINYINT
+);
+#详情页图片
+CREATE TABLE qnw_product_detail(
+    lid INT PRIMARY KEY AUTO_INCREMENT,
+    family_id INT,              #所属型号家族编号
+    title VARCHAR(128),         #主标题
+    title VARCHAR(128),         #主标题
+    subtitle VARCHAR(128),      #副标题
+      price DECIMAL(10,2),        #价格
+      promise VARCHAR(64),        #服务承诺
+)
+#
+
+CREATE TABLE xz_laptop(
+  lid INT PRIMARY KEY AUTO_INCREMENT,
+  family_id INT,              #所属型号家族编号
+  title VARCHAR(128),         #主标题
+  subtitle VARCHAR(128),      #副标题
+  price DECIMAL(10,2),        #价格
+  promise VARCHAR(64),        #服务承诺
+  spec VARCHAR(64),           #规格/颜色
+
+  lname VARCHAR(32),          #商品名称
+  os VARCHAR(32),             #操作系统
+  memory VARCHAR(32),         #内存容量
+  resolution VARCHAR(32),     #分辨率
+  video_card VARCHAR(32),     #显卡型号
+  cpu VARCHAR(32),            #处理器
+  video_memory VARCHAR(32),   #显存容量
+  category VARCHAR(32),       #所属分类
+  disk VARCHAR(32),           #硬盘容量及类型
+  details VARCHAR(1024),      #产品详细说明
+
+  shelf_time BIGINT,          #上架时间
+  sold_count INT,             #已售出的数量
+  is_onsale BOOLEAN           #是否促销中
+);
+INSERT INTO qnw_user VALUE
+(1,'21345621548741','prop ', '6541651@163.com','','����',1),
+(2,'21365415416542','army' , '1241651@163.com','','����',2),
+(3,'50245621548741','bob' ,'5415514511@qq.com','','����',1);
+
+INSERT INTO qnw_carousel VALUE
+(null,'img/index/17.png','轮播图片1',null),
+(null,'img/index/18.png','轮播图片2',null),
+(null,'img/index/19.png','轮播图片3',null),
+(null,'img/index/20.png','轮播图片4',null);
+
+INSERT INTO qnw_laptop_pic VALUE
+(null,1,'img/detail/1_sm.jpg','','img/detail/1.jpg'),
+(null,1,'img/detail/2_sm.jpg','','img/detail/2.jpg'),
+(null,1,'img/detail/3_sm.jpg','','img/detail/3.jpg'),
+(null,1,'img/detail/4_sm.jpg','','img/detail/4.jpg'),
+(null,1,'img/detail/5_sm.jpg','','img/detail/5.jpg'),
+(null,1,'img/detail/6_sm.jpg','','img/detail/6.jpg'),
+(null,1,'img/detail/7_sm.jpg','','img/detail/7.jpg'),
+(null,1,'img/detail/8_sm.jpg','','img/detail/8.jpg');
+INSERT INTO qnw_laptop_family VALUES
+(),
+
+INSERT INTO qnw_index_product VALUES
+(NULL, '丽江—大理,丽江 6天5晚半自助游', '随心定制纯玩自由行+可升级香格里拉泸沽湖+尊享特色客栈', 'img/index/6.jpg', 1050, '', 1, 1, 1),
+(NULL, '呼伦贝尔 6天5晚 跟团游', '越野穿越+草原', 'img/index/7.jpg', 2780, '', 1, 1, 1),
+(NULL, '巴黎岛 1天 自由行', '酒店上门接送 中文在线客服', 'img/index/15.jpg', 439, '', 1, 1, 1),
+(NULL, '北京—大理,丽江跟团游游', '5星温泉海景+全景游+不用购物一价包全', 'img/index/8.jpg', 439, '', 1, 1, 1),
+(NULL, '北京-德意法瑞 12天11晚', '春节低价预售！德意法瑞4国12天双保', 'img/index/9.jpg', 3605, '', 1, 1, 1),
+(NULL, '昆明-大理丽江 6天5晚 跟团游', '5星温泉海景+全景游+不用购物', 'img/index/14.jpg', 3605, '', 1, 1, 1);
+

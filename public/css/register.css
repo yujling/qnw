@@ -1,0 +1,164 @@
+.register_container{
+    display:flex;
+    height:411px;
+    justify-content:flex-start;
+    margin-top:40px;
+}
+.register_container-left{
+    width:645px;
+    height:411px;
+   margin-left:45px;
+   padding-top:40px;
+   padding-left:30px;
+   font-size:12px;
+}
+.register_container-right{
+    width:320px;
+    height:457px;
+    padding:10px;
+}
+.input_border>img{
+    width:20px;
+    height:20px;
+    display: inline-block;
+    line-height: 34px;
+    text-align: center;
+    vertical-align: middle;
+    margin-left:2px;
+    border-left:1px dotted #555555;
+}
+.label{
+    font-size:16.8px;
+    color:#999999;
+    margin-right:10px;
+}
+.register_input,.input_check{
+    width:256px;
+    height:36px;
+    display:inline-block;
+    outline:0;
+}
+.input_check{
+    width:109px;
+    font-family:Arial;  
+}
+.input_border{
+    display: inline-block;
+    width:256px;
+    height:34px;
+     border:1px solid #CCCCCC;
+}
+.input_border>input{
+     width:218px;
+     display: inline-block;
+     border:0 !important;
+     color:#757575;
+     padding-top:6px;
+     outline:0;
+}
+.register_input，.input_check{
+    font-size:14px;
+    line-height:36px;
+    padding:15px 10px;
+    border:1px solid #555555;
+    text-indent: 10px;
+    color:#757575;
+}
+.register_container-left>div{
+    margin-bottom:25px;
+}
+#input_check_code{
+    background:#ddd;
+    vertical-align: middle;
+    margin-right:4px;
+}
+
+.pro_font{
+    color:#999999;
+    font-size:12px;
+}
+.pro_xy{
+    color:#529CE1;
+    font-size:12px;
+}
+#regiser_pro{
+    padding-top:9px;
+    margin-left:80px;
+}
+.register_input_explain{
+    color:#999999;
+    font-size:5px;
+}
+.get_code{
+    display:inline-block;
+    background:#0B60F0;
+    color:#FFFFFF;
+    margin-left:10px;
+    height:20px;
+    width:94px;
+    text-align: center;
+    line-height: 20px;
+    font-size:12px;
+    border-radius:2px;
+    border:0;
+    padding-bottom:2px;
+}
+.replace_a_pies{
+    color:#006BC8
+}
+.replace_a_pies:hover,.pro_xy:hover{
+    color:#D6741F;
+}
+.angree_reg{
+    width:116px;
+    height:30px;
+    background:#FF8200;
+    color:#FFFFFF;
+    font-family: tahoma,arial,"Hiragino Sans GB",simsun,sans-serif;
+    font-size: 14px;
+    border:0;
+    margin-left:80px;
+}
+.label_phone{
+    margin-right:16px;
+}
+.label_psw{
+    margin-right:15px;
+}
+.label_check{
+    margin-right:30px;
+}
+.label_jh{
+    margin-right:30px;
+}
+.register_ul{
+    list-style: disc;
+}
+.register_container-right-font1{
+    font-size:14px;
+    display:block;
+    color:#555;
+}
+.register_ul>li{
+    padding-top:5px;
+    display: list-item;
+    text-align: -webkit-match-parent;
+    font: normal 12px/25px simsun;
+    color:#555;
+}
+.register_ul>img{
+    margin-top:15px;
+}
+.register_ul>li>span{
+    color:#FD017C;
+}
+.vail_success{
+    color:#49B3CD;
+    font-size:14px;
+    font-weight:bold;
+}
+.vail_default{
+     color:red;
+     font-size:14px;
+     font-weight:bold;
+}
